@@ -1043,11 +1043,11 @@ F 3 "" H 9100 1300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:L_Small L2
+L Device:Ferrite_Bead_Small L2
 U 1 1 609201A5
 P 9300 1000
 F 0 "L2" V 9485 1000 50  0000 C CNN
-F 1 "L_Small" V 9394 1000 50  0000 C CNN
+F 1 "MPZ1608S221A" V 9400 1150 50  0000 C CNN
 F 2 "Inductor_SMD:L_0603_1608Metric" H 9300 1000 50  0001 C CNN
 F 3 "~" H 9300 1000 50  0001 C CNN
 	1    9300 1000
@@ -1589,7 +1589,7 @@ Wire Wire Line
 	4550 1100 5300 1100
 Text Label 8000 1000 0    50   ~ 0
 VDDCORE
-Text Label 8600 1000 0    50   ~ 0
+Text Label 8600 1550 1    50   ~ 0
 VDDANA
 $Comp
 L Device:D_TVS D3
