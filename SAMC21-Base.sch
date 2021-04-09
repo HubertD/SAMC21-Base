@@ -706,7 +706,6 @@ F 3 "" H 3400 5700 50  0001 C CNN
 $EndComp
 Text GLabel 3800 6600 2    50   UnSpc ~ 0
 INH
-NoConn ~ 3800 6200
 $Comp
 L Device:R_Small RT1
 U 1 1 6085DE3B
@@ -1752,4 +1751,6 @@ F 3 "~" H 2350 1350 50  0001 C CNN
 	1    2350 1350
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3800 6200 4200 6200
 $EndSCHEMATC
