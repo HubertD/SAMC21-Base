@@ -288,17 +288,6 @@ F 3 "" H 2000 5850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+36V #PWR011
-U 1 1 6081FE41
-P 2000 5650
-F 0 "#PWR011" H 2000 5500 50  0001 C CNN
-F 1 "+36V" H 2015 5823 50  0000 C CNN
-F 2 "" H 2000 5650 50  0001 C CNN
-F 3 "" H 2000 5650 50  0001 C CNN
-	1    2000 5650
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+5V #PWR016
 U 1 1 60839232
 P 3450 5700
@@ -307,17 +296,6 @@ F 1 "+5V" V 3450 5850 50  0000 L CNN
 F 2 "" H 3450 5700 50  0001 C CNN
 F 3 "" H 3450 5700 50  0001 C CNN
 	1    3450 5700
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+36V #PWR018
-U 1 1 60839AB7
-P 3550 5700
-F 0 "#PWR018" H 3550 5550 50  0001 C CNN
-F 1 "+36V" V 3550 5850 50  0000 L CNN
-F 2 "" H 3550 5700 50  0001 C CNN
-F 3 "" H 3550 5700 50  0001 C CNN
-	1    3550 5700
 	1    0    0    -1  
 $EndComp
 Text GLabel 3950 6600 2    50   UnSpc ~ 0
@@ -832,28 +810,6 @@ F 1 "MCP1703A" H 8200 2101 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-89-3" H 8200 2150 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20005122B.pdf" H 8200 1900 50  0001 C CNN
 	1    8200 1950
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:PWR_FLAG #FLG01
-U 1 1 606C55C2
-P 2700 1350
-F 0 "#FLG01" H 2700 1425 50  0001 C CNN
-F 1 "PWR_FLAG" H 2700 1523 50  0001 C CNN
-F 2 "" H 2700 1350 50  0001 C CNN
-F 3 "~" H 2700 1350 50  0001 C CNN
-	1    2700 1350
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+36V #PWR05
-U 1 1 606BF4B9
-P 2700 1300
-F 0 "#PWR05" H 2700 1150 50  0001 C CNN
-F 1 "+36V" H 2700 1500 50  0000 C CNN
-F 2 "" H 2700 1300 50  0001 C CNN
-F 3 "" H 2700 1300 50  0001 C CNN
-	1    2700 1300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1627,11 +1583,6 @@ Wire Notes Line
 	10850 2850 900  2850
 Wire Notes Line
 	10850 700  10850 2850
-Connection ~ 2700 1350
-Wire Wire Line
-	2700 1350 2500 1350
-Wire Wire Line
-	2700 1300 2700 1350
 Wire Wire Line
 	6350 1350 6750 1350
 Wire Wire Line
@@ -1715,8 +1666,6 @@ Wire Wire Line
 Text Notes 4700 1950 1    50   ~ 0
 EN at VIN>9V
 Connection ~ 2950 1350
-Wire Wire Line
-	2950 1350 2700 1350
 Wire Wire Line
 	2950 1350 3150 1350
 Connection ~ 3550 1350
@@ -2016,8 +1965,6 @@ F 3 "~" H 6600 4800 50  0001 C CNN
 	1    6600 4800
 	1    0    0    -1  
 $EndComp
-Text Label 4050 1350 0    50   ~ 0
-DCDC_IN
 Text Label 5650 1350 0    50   ~ 0
 CB
 Text Label 5650 1450 0    50   ~ 0
@@ -2029,4 +1976,47 @@ LED
 Text GLabel 9550 5200 2    50   Output ~ 0
 LED
 NoConn ~ 7550 4300
+Wire Wire Line
+	2950 1350 2700 1350
+Wire Wire Line
+	2700 1350 2500 1350
+Connection ~ 2700 1350
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 606C55C2
+P 2700 1350
+F 0 "#FLG01" H 2700 1425 50  0001 C CNN
+F 1 "PWR_FLAG" H 2700 1523 50  0001 C CNN
+F 2 "" H 2700 1350 50  0001 C CNN
+F 3 "~" H 2700 1350 50  0001 C CNN
+	1    2700 1350
+	-1   0    0    1   
+$EndComp
+Text Label 4050 1350 0    50   ~ 0
+DCDC_IN
+Wire Wire Line
+	2700 1300 2700 1350
+$Comp
+L power:+36V #PWR05
+U 1 1 606BF4B9
+P 2700 1300
+F 0 "#PWR05" H 2700 1150 50  0001 C CNN
+F 1 "+36V" H 2700 1500 50  0000 C CNN
+F 2 "" H 2700 1300 50  0001 C CNN
+F 3 "" H 2700 1300 50  0001 C CNN
+	1    2700 1300
+	1    0    0    -1  
+$EndComp
+Text Label 2100 5550 0    50   ~ 0
+DCDC_IN
+Wire Wire Line
+	3550 5700 3550 5550
+Wire Wire Line
+	2000 5550 2400 5550
+Wire Wire Line
+	2000 5550 2000 5650
+Text Label 3650 5550 0    50   ~ 0
+DCDC_IN
+Wire Wire Line
+	3550 5550 3950 5550
 $EndSCHEMATC
